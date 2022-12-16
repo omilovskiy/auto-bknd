@@ -31,6 +31,10 @@ public class EmployeeService {
     return employeeRepository.save(employee);
   }
 
+  public void deleteById(String id) {
+    employeeRepository.deleteById(id);
+  }
+
   public List<Employee> findAll() {
     return employeeRepository.findAll();
   }

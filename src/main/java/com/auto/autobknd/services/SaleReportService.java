@@ -38,6 +38,10 @@ public class SaleReportService {
     return saleReportRepository.save(saleReport);
   }
 
+  public void deleteById(String id) {
+    saleReportRepository.deleteById(id);
+  }
+
   public List<SaleReport> findAll() {
     return saleReportRepository.findAll();
   }

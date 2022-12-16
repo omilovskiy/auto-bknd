@@ -32,6 +32,10 @@ public class CarService {
     return carRepository.findAll();
   }
 
+  public void deleteById(String id) {
+    carRepository.deleteById(id);
+  }
+
   public Car getById(String id) {
     return findById(id).orElseThrow(() -> new NotFoundException("Can't find by id: " + id));
   }
